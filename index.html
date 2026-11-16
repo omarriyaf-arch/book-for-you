@@ -3,277 +3,100 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Book For You | بوك فور يو التعليمية</title>
+<title>موارد الريادة | دروس وتمارين وامتحانات للابتدائي والإعدادي</title>
+<meta name="description" content="دليل موارد لتلاميذ مؤسسات الريادة بالمغرب: دروس، تمارين، امتحانات وفيديوهات للابتدائي والإعدادي من منصات موثوقة.">
 <style>
-:root{--green:#176b45;--deep:#104c34;--mint:#e9f7ef;--ink:#20312a;--muted:#64746c;--gold:#f2b84b}
-*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#f6f8f6;color:var(--ink)}
-header{background:linear-gradient(120deg,var(--deep),#21885a);color:white;padding:22px max(5%,calc((100% - 1100px)/2));display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
-.brand{font-size:30px;font-weight:800;letter-spacing:1px}.brand small{display:block;font-size:13px;font-weight:400;letter-spacing:0}
-nav a{color:white;text-decoration:none;margin:0 8px;font-size:14px}
-.nav-cta{display:inline-block;background:#f2b84b;color:#20312a!important;padding:9px 14px;border-radius:22px;font-weight:bold}
-.student-entry{display:inline-flex;align-items:center;gap:9px;background:#176b45;color:#fff;text-decoration:none;padding:14px 22px;border-radius:13px;font-weight:bold;box-shadow:0 5px 14px #104c3420}
-.student-entry:hover{background:#104c34}.student-entry:focus-visible{outline:3px solid #f2b84b;outline-offset:3px}
-main{max-width:1100px;margin:auto;padding:24px 18px}
-.hero{background:var(--mint);border-radius:22px;padding:30px;text-align:center}
-.hero h1{color:var(--deep);font-size:clamp(25px,4vw,38px);margin:5px 0 12px}.hero p{color:#466455;line-height:1.8}
-.pill{display:inline-block;background:white;color:var(--green);border-radius:30px;padding:7px 14px;font-size:13px}
-.panel{background:white;border:1px solid #e5ece7;border-radius:18px;padding:22px;margin-top:22px;box-shadow:0 5px 20px #153b2510}
-h2{color:var(--deep);margin-top:0;font-size:22px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-label{display:block;font-size:14px;font-weight:bold;margin:12px 0 6px}
-input,select{width:100%;padding:12px;border:1px solid #cddbd1;border-radius:10px;background:white;font:inherit;color:var(--ink)}
-button{border:0;background:var(--green);color:white;padding:12px 18px;border-radius:10px;font:inherit;font-weight:bold;cursor:pointer}
-button:hover{background:var(--deep)}button.secondary{background:#edf5ef;color:var(--deep)}
-.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}
+:root{--green:#176b45;--deep:#104c34;--mint:#e9f7ef;--ink:#20312a;--muted:#64746c;--gold:#f2b84b;--bg:#f6f8f6;--card:#fff;--line:#e5ece7}
+@media(prefers-color-scheme:dark){:root{--bg:#101a15;--card:#18261f;--ink:#e8f1ec;--muted:#9db3a6;--mint:#1b2f25;--line:#29403340;--deep:#8fe0b4}}
+*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:linear-gradient(120deg,#104c34,#21885a);color:#fff;padding:20px max(5%,calc((100% - 1100px)/2));display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.brand{font-size:26px;font-weight:800}.brand small{display:block;font-size:13px;font-weight:400}
+nav a{color:#fff;text-decoration:none;margin:0 8px;font-size:14px}
+main{max-width:1100px;margin:auto;padding:22px 16px}
+.hero{background:var(--mint);border-radius:22px;padding:28px;text-align:center}
+.hero h1{color:var(--deep);font-size:clamp(24px,4vw,36px);margin:6px 0 10px}.hero p{color:var(--muted);line-height:1.8;margin:0}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;margin-top:20px}
+h2{color:var(--deep);margin-top:0;font-size:21px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+label{display:block;font-size:14px;font-weight:bold;margin:8px 0 6px}
+select,input{width:100%;padding:12px;border:1px solid #cddbd1;border-radius:10px;background:var(--card);font:inherit;color:var(--ink)}
+.types{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.chip{border:1px solid #cddbd1;background:var(--card);color:var(--ink);padding:10px 14px;border-radius:30px;font:inherit;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--green);color:#fff;border-color:var(--green)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:16px}
+.card{border:1px solid var(--line);border-radius:14px;padding:16px;background:var(--card);display:flex;flex-direction:column;gap:8px}
+.card h3{margin:0;color:var(--deep);font-size:17px}.card p{margin:0;color:var(--muted);font-size:14px;line-height:1.7}
+.card .emoji{font-size:26px}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+.btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;padding:9px 13px;border-radius:10px;font-size:14px;font-weight:bold}
+.btn.alt{background:#edf5ef;color:#104c34}.btn:focus-visible,.chip:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.badge{display:inline-block;background:var(--gold);color:#20312a;border-radius:20px;padding:3px 10px;font-size:12px;font-weight:bold;width:max-content}
+.badge.alt{background:#edf5ef;color:#104c34}
 .note{font-size:13px;color:var(--muted);line-height:1.8}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
-.card{border:1px solid #e5ece7;border-radius:14px;padding:16px;background:#fff}
-.card .emoji{font-size:28px}.card h3{margin:8px 0;color:var(--deep)}.card p{color:var(--muted);font-size:14px;line-height:1.7}
-.tag{display:inline-block;background:#edf7f0;color:#176b45;border-radius:20px;padding:5px 9px;font-size:12px}
-.hidden{display:none!important}.subject-card{display:flex;flex-direction:column;gap:10px}.subject-card button{width:100%}.lesson-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;border:1px solid #e5ece7;border-radius:12px;padding:13px;margin:9px 0;background:#fff}.lesson-view{background:#f8fbf8;border:1px solid #dcebe0;border-radius:14px;padding:18px;line-height:1.9;margin-top:16px}.lesson-view h3{color:var(--deep)}.lesson-view li{margin:7px 0}.status{padding:12px;border-radius:10px;background:#fff8e8;color:#75551a;line-height:1.7}
-footer{text-align:center;color:var(--muted);padding:28px 15px;font-size:13px}
-@media(max-width:600px){header{justify-content:center;text-align:center}nav{width:100%}.hero{padding:22px 15px}}
+.status{padding:12px;border-radius:10px;background:#fff8e8;color:#75551a;line-height:1.7;font-size:14px}
+ul.links{padding-inline-start:20px;line-height:2}ul.links a{color:var(--green)}
+footer{text-align:center;color:var(--muted);padding:26px 14px;font-size:13px;line-height:1.8}
+.hidden{display:none!important}
 </style>
 </head>
 <body>
 <header>
- <div class="brand">📚 Book For You <small>بوك فور يو التعليمية — طريقك نحو التفوق</small></div>
- <nav><a href="#home">الرئيسية</a><a href="#account">حساب التلميذ</a><a href="#studentSearch" class="nav-cta">فضاء التلميذ 🔎</a></nav>
+ <div class="brand">🎒 موارد الريادة <small>دروس · تمارين · امتحانات · فيديوهات — للابتدائي والإعدادي</small></div>
+ <nav><a href="#finder">ابحث عن درسك</a><a href="#platforms">المنصات</a><a href="#sources">المصادر</a><a href="#about">عن الريادة</a><a href="#contribute">ساهم</a></nav>
 </header>
 <main>
-<section class="hero" id="home">
- <span class="pill">منصة تعليمية تجريبية</span>
- <h1>كل درس أقرب إليك مع Book For You</h1>
- <p>ابحث عن الدروس والتمارين والمراجعات حسب السلك والمستوى والمادة، باستعمال جزء من الكلمة أو كلمات مفتاحية.</p>
- <div class="actions" style="justify-content:center"><a class="student-entry" href="#studentSearch">🎒 ادخل إلى فضاء التلميذ وابحث عن درسك</a><a href="#account"><button class="secondary">اختيار المستوى الدراسي</button></a></div>
+<section class="hero">
+ <h1>كل ما تحتاجه للمراجعة في مكان واحد</h1>
+ <p>اختر السلك والمستوى والمادة، فنوصلك مباشرة بأفضل نتائج البحث في المنصات التعليمية المغربية، ابتداءً من المنصة الرسمية TelmidTICE.</p>
 </section>
 
-<section class="panel" id="account">
- <h2>👩‍🎓 حساب التلميذ</h2>
- <div class="status">هذه نسخة أولية للتجربة على هذا الجهاز فقط. لا تدخل كلمة مرور أو معلومات شخصية حساسة. التسجيل الحقيقي الآمن وربط الحسابات بين الأجهزة يحتاجان إلى قاعدة بيانات وخدمة مصادقة قبل النشر العام.</div>
+<section class="panel" id="finder">
+ <h2>🔎 ابحث عن درسك</h2>
  <div class="grid">
-  <div><label for="studentName">الاسم الأول أو الاسم المستعار</label><input id="studentName" maxlength="30" placeholder="مثال: أمينة"></div>
-  <div><label for="stage">السلك الدراسي</label><select id="stage"><option value="">اختر السلك</option><option>الابتدائي</option><option>الإعدادي</option><option>الثانوي التأهيلي</option></select></div>
-  <div><label for="level">المستوى</label><select id="level" disabled><option value="">اختر السلك أولاً</option></select></div>
+  <div><label for="stage">السلك</label><select id="stage"><option value="">اختر السلك</option></select></div>
+  <div><label for="level">المستوى</label><select id="level" disabled><option value="">اختر السلك أولًا</option></select></div>
+  <div><label for="subject">المادة</label><select id="subject" disabled><option value="">اختر السلك أولًا</option></select></div>
+  <div><label for="topic">الدرس أو الكلمة المفتاحية (اختياري)</label><input id="topic" placeholder="مثال: الكسور، الجهاز الهضمي، le passé composé"></div>
  </div>
- <div class="actions"><button id="saveProfile">حفظ الاختيار على هذا الجهاز</button><button class="secondary" id="clearProfile">مسح الاختيار</button></div>
- <p id="profileMessage" class="note" aria-live="polite"></p>
+ <div class="types" role="group" aria-label="نوع المورد" id="types"></div>
+ <p class="note"><label style="display:inline;font-weight:normal"><input type="checkbox" id="raida" checked style="width:auto"> أضِف كلمة «الريادة» إلى البحث</label></p>
+ <p class="note">🔒 لا توجد حسابات. يحفظ المتصفح اختيارك (السلك والمستوى والمادة) على جهازك فقط، ويمكنك مسحه: <button type="button" id="clearPrefs" class="chip" style="padding:6px 12px">مسح اختياري المحفوظ</button></p>
+ <div id="results" class="cards"></div>
+ <p id="hint" class="note">اختر السلك والمستوى والمادة لتظهر لك نتائج البحث.</p>
 </section>
 
-<section class="panel" id="studentSearch">
- <h2>🎒 فضاء التلميذ — ابحث عن درسك المفضل</h2>
- <p>مرحبًا بك! اختر مستواك ومادتك، أو اكتب اسم الدرس الذي تريد تعلمه، وستظهر لك الموارد المطابقة.</p>
- <div class="actions"><button type="button" id="startSearch">🔎 ابدأ البحث عن الدروس</button></div>
- <div id="lessons">
- <h2 style="margin-top:22px">📖 مكتبة الدروس والموارد</h2>
- <p class="note">اختر السلك والمستوى والمادة للبحث داخل الموارد المتاحة. هذه النسخة تتضمن أمثلة تجريبية فقط؛ وستُضاف موارد مدارس الريادة بعد التحقق من مصدرها وسنتها الدراسية.</p>
- <div class="grid">
-  <div><label for="filterStage">السلك</label><select id="filterStage"><option value="">كل الأسلاك</option><option>الابتدائي</option><option>الإعدادي</option><option>الثانوي التأهيلي</option></select></div>
-  <div><label for="filterLevel">المستوى</label><select id="filterLevel"><option value="">كل المستويات</option></select></div>
-  <div><label for="filterSubject">المادة</label><select id="filterSubject"><option value="">كل المواد</option></select></div>
-  <div><label for="search">بحث بالكلمات</label><input id="search" placeholder="مثال: الكسور، الجهاز الهضمي، fractions..."></div>
- </div>
- <div class="cards" id="lessonCards" style="margin-top:18px"></div>
- <p id="empty" class="note hidden">لا توجد موارد مطابقة في المكتبة الحالية. جرّب كلمة أخرى أو غيّر المستوى أو المادة. تذكير: المكتبة الحالية تجريبية ولا تضم بعد جميع دروس مدارس الريادة.</p>
-</div>
+<section class="panel hidden" id="curatedPanel">
+ <h2>⭐ موارد مختارة</h2>
+ <div id="curated" class="cards"></div>
 </section>
 
-<section class="panel" id="subjectCatalog">
- <h2>📚 تصفّح المواد والدروس</h2>
- <p>اختر السلك والمستوى، ثم اضغط على «عرض الدروس» تحت المادة التي تريدها. ستظهر لك عناوين الدروس المتاحة، ويمكنك فتح الدرس لقراءة الشرح والتمارين.</p>
- <div class="grid">
-  <div><label for="catalogStage">السلك الدراسي</label><select id="catalogStage"><option value="">اختر السلك</option><option>الابتدائي</option><option>الإعدادي</option></select></div>
-  <div><label for="catalogLevel">المستوى الدراسي</label><select id="catalogLevel" disabled><option>اختر السلك أولاً</option></select></div>
- </div>
- <div id="subjectCards" class="cards" style="margin-top:18px"></div>
- <div id="catalogLessons" class="hidden" style="margin-top:22px">
-  <h2 id="catalogSubjectTitle">دروس المادة</h2>
-  <div id="lessonList"></div>
- </div>
- <div id="openedLesson" class="lesson-view hidden"></div>
- <p class="note">تنبيه: الدروس التي تحتوي على شرح كامل في هذه النسخة هي أمثلة توضيحية لبناء طريقة العرض، وليست كلها مقررات موثقة لمدارس الريادة. ستُضاف الدروس الرسمية بعد التحقق من مصادرها والسنة الدراسية.</p>
+<section class="panel" id="platforms">
+ <h2>🏛️ المنصات المرجعية</h2>
+ <div id="platformCards" class="cards"></div>
 </section>
 
-<section class="panel">
- <h2>🌱 رسالة Book For You</h2>
- <p style="line-height:1.9">كل تلميذ يستحق فرصة للتعلم. هدف Book For You هو تسهيل الوصول إلى الشروحات والتمارين والمراجعات، مع احترام حقوق المؤلف وحماية خصوصية الأطفال.</p>
+<section class="panel" id="sources">
+ <h2>📌 مصادر المحتوى</h2>
+ <p class="note">كل الدروس والتمارين والفيديوهات تبقى على مواقعها الأصلية، وهذا الموقع يوجّهك إليها فقط. المصادر المستعملة:</p>
+ <ul class="links" id="sourceList"></ul>
+ <p class="note" style="margin-top:10px">👩‍🏫 <span id="teacherNote"></span> <a id="teacherLink" href="#" target="_blank" rel="noopener noreferrer">الرابط</a></p>
+ <p class="note">ℹ️ محتوى TelmidTICE دروس دعم وفق المنهاج الوطني، وقد لا يطابق حرفيًا كتب الريادة الجديدة؛ استشر أستاذك عند الشك.</p>
+</section>
+
+<section class="panel" id="about">
+ <h2>ℹ️ ما هي مؤسسات الريادة؟</h2>
+ <p style="line-height:1.9">«مؤسسات الريادة» مشروع لوزارة التربية الوطنية والتعليم الأولي والرياضة، يندرج ضمن خارطة الطريق 2022-2026 «من أجل مدرسة عمومية ذات جودة». أُحدثت علامة «مؤسسة الريادة» بالمرسوم رقم 2.24.144 الصادر في 8 يوليوز 2024، وأعلنت الوزارة في دجنبر 2025 لوائح تضم أزيد من 2400 مؤسسة حاصلة على العلامة. وتتعلق الريادة بالابتدائي والإعدادي.</p>
+ <ul class="links" id="infoLinks"></ul>
+</section>
+
+<section class="panel" id="contribute">
+ <h2>🤝 ساهم في إغناء الموقع</h2>
+ <p style="line-height:1.9">هل لديك رابط لمورد مجاني وقانوني (درس، تمرين، امتحان، فيديو) لتلاميذ الريادة؟ أضفه في الملف <code>data/resources.js</code> وافتح Pull Request على GitHub، أو افتح Issue بالرابط والمستوى والمادة.</p>
+ <div class="status">⚠️ هذا الموقع لا يستضيف محتوى مدرسيًا ولا ينسخه: يكتفي بتوجيهك إلى مصادره الأصلية مع ذكر مصدر كل رابط. محتوى كل منصة يخضع لشروطها. لا حسابات ولا جمع لمعطيات شخصية؛ يُحفظ اختيارك في متصفحك فقط.</div>
 </section>
 </main>
-<footer>© Book For You — نموذج أولي قابل للتطوير. ليس موقعًا منشورًا على الإنترنت بعد.</footer>
-<script>
-const levels={
- "الابتدائي":["الأول ابتدائي","الثاني ابتدائي","الثالث ابتدائي","الرابع ابتدائي","الخامس ابتدائي","السادس ابتدائي"],
- "الإعدادي":["الأولى إعدادي","الثانية إعدادي","الثالثة إعدادي"],
- "الثانوي التأهيلي":["الجذع المشترك","الأولى باكالوريا","الثانية باكالوريا"]
-};
-const subjects={
- "الابتدائي":["اللغة العربية","اللغة الفرنسية","الرياضيات","النشاط العلمي","الاجتماعيات","التربية الإسلامية"],
- "الإعدادي":["اللغة العربية","اللغة الفرنسية","الرياضيات","الفيزياء والكيمياء","علوم الحياة والأرض","الاجتماعيات","التربية الإسلامية"],
- "الثانوي التأهيلي":["اللغة العربية","اللغة الفرنسية","الرياضيات","الفلسفة","الفيزياء والكيمياء","علوم الحياة والأرض","الاجتماعيات","التربية الإسلامية"]
-};
-const resources=[
- {stage:"الابتدائي",level:"الخامس ابتدائي",subject:"الرياضيات",title:"مراجعة العمليات على الأعداد",type:"مراجعة",icon:"➗",desc:"بطاقة مراجعة تجريبية لتنظيم التعلمات."},
- {stage:"الابتدائي",level:"السادس ابتدائي",subject:"اللغة العربية",title:"فهم المقروء والتعبير",type:"درس",icon:"📘",desc:"نموذج تجريبي لدرس في اللغة العربية."},
- {stage:"الإعدادي",level:"الأولى إعدادي",subject:"الرياضيات",title:"الأعداد الصحيحة والعشرية",type:"درس",icon:"📐",desc:"مورد تجريبي؛ سيضاف الشرح والتمارين لاحقًا."},
- {stage:"الإعدادي",level:"الثانية إعدادي",subject:"الفيزياء والكيمياء",title:"المادة والتحولات",type:"درس",icon:"⚗️",desc:"بطاقة تعريفية لمورد في الفيزياء والكيمياء."},
- {stage:"الإعدادي",level:"الثالثة إعدادي",subject:"علوم الحياة والأرض",title:"وظائف التغذية",type:"مراجعة",icon:"🧬",desc:"نموذج لمراجعة استعدادًا للامتحان."},
- {stage:"الإعدادي",level:"الثالثة إعدادي",subject:"الاجتماعيات",title:"التاريخ والجغرافيا والمواطنة",type:"تمارين",icon:"🌍",desc:"مورد تجريبي في مكونات مادة الاجتماعيات."},
- {stage:"الابتدائي",level:"الرابع ابتدائي",subject:"اللغة الفرنسية",title:"Compréhension de texte",type:"درس",icon:"🇫🇷",desc:"نموذج تجريبي لمورد في اللغة الفرنسية."},
- {stage:"الإعدادي",level:"الأولى إعدادي",subject:"اللغة العربية",title:"أنواع الجملة",type:"درس",icon:"📘",desc:"نموذج تجريبي في مكون اللغة العربية."},
- {stage:"الإعدادي",level:"الثانية إعدادي",subject:"التربية الإسلامية",title:"قيم التعاون والتسامح",type:"درس",icon:"🌙",desc:"نموذج تجريبي في التربية الإسلامية."},
- {stage:"الثانوي التأهيلي",level:"الجذع المشترك",subject:"الفلسفة",title:"مدخل إلى التفكير الفلسفي",type:"درس",icon:"💭",desc:"نموذج تجريبي للتعريف بالتفكير الفلسفي."},
- {stage:"الثانوي التأهيلي",level:"الأولى باكالوريا",subject:"الاجتماعيات",title:"منهجية تحليل الوثائق",type:"مراجعة",icon:"🌍",desc:"نموذج تجريبي في منهجية الاشتغال على الوثائق."},
- {stage:"الثانوي التأهيلي",level:"الجذع المشترك",subject:"التربية الإسلامية",title:"مدخل التزكية",type:"درس",icon:"🌙",desc:"نموذج تجريبي في التربية الإسلامية."},
- {stage:"الثانوي التأهيلي",level:"الجذع المشترك",subject:"اللغة الفرنسية",title:"Méthodologie de lecture",type:"نصائح",icon:"📝",desc:"نموذج مورد في مهارات القراءة."},
- {stage:"الثانوي التأهيلي",level:"الثانية باكالوريا",subject:"الرياضيات",title:"منهجية الاستعداد للامتحان",type:"مراجعة",icon:"🎯",desc:"إرشادات تجريبية للمراجعة."}
-];
-const $=id=>document.getElementById(id);
-function fillLevels(stageEl,levelEl,allLabel){
- const stage=stageEl.value; levelEl.innerHTML=`<option value="">${allLabel}</option>`;
- (levels[stage]||Object.values(levels).flat()).forEach(v=>levelEl.add(new Option(v,v)));
- levelEl.disabled=!stage && levelEl.id==="level";
-}
-function fillSubjects(){
- const stage=$("filterStage").value; const sel=$("filterSubject");sel.innerHTML='<option value="">كل المواد</option>';
- const list=stage?(subjects[stage]||[]):[...new Set(Object.values(subjects).flat())];
- [...new Set(list)].forEach(v=>sel.add(new Option(v,v)));
-}
-// توحيد أشكال الحروف لتسهيل البحث بالعربية والفرنسية
-function normalizeText(value){
- return String(value??"")
-  .toLocaleLowerCase("fr")
-  .normalize("NFD")
-  .replace(/[\\u0300-\\u036f]/g,"")       // إزالة الحركات واللكنات
-  .replace(/[\\u064B-\\u065F\\u0670]/g,"") // إزالة التشكيل العربي
-  .replace(/ـ/g,"")                         // إزالة التطويل
-  .replace(/[أإآٱ]/g,"ا")
-  .replace(/ى/g,"ي")
-  .replace(/ؤ/g,"و")
-  .replace(/ئ/g,"ي")
-  .replace(/ة/g,"ه")
-  .replace(/[\\s\\u00A0]+/g," ")
-  .trim();
-}
-function render(){
- const st=$("filterStage").value,lv=$("filterLevel").value,su=$("filterSubject").value;
- const q=normalizeText($("search").value);
- const list=resources.filter(r=>{
-  const text=normalizeText([r.title,r.subject,r.level,r.stage,r.desc,r.keywords||"",r.type].join(" "));
-  return (!st||r.stage===st)&&(!lv||r.level===lv)&&(!su||r.subject===su)&&(!q||text.includes(q));
- });
- $("lessonCards").innerHTML="";
- list.forEach(r=>{
-  const c=document.createElement("article");c.className="card";
-  const e=document.createElement("div");e.className="emoji";e.textContent=r.icon;
-  const h=document.createElement("h3");h.textContent=r.title;
-  const p=document.createElement("p");p.textContent=`${r.stage} — ${r.level} — ${r.subject}`;
-  const d=document.createElement("p");d.textContent=r.desc;
-  const tag=document.createElement("span");tag.className="tag";tag.textContent=r.type+" · مثال تجريبي";
-  c.append(e,h,p,d,tag);$("lessonCards").append(c);
- });
- $("empty").classList.toggle("hidden",list.length!==0);
-}
-$("startSearch").addEventListener("click",()=>{ $("search").focus(); $("search").scrollIntoView({behavior:"smooth",block:"center"}); });
-$("stage").addEventListener("change",()=>fillLevels($("stage"),$("level"),"اختر المستوى"));
-$("filterStage").addEventListener("change",()=>{fillLevels($("filterStage"),$("filterLevel"),"كل المستويات");fillSubjects();render()});
-["filterLevel","filterSubject","search"].forEach(id=>$(id).addEventListener("input",render));
-$("saveProfile").addEventListener("click",()=>{
- const name=$("studentName").value.trim(),stage=$("stage").value,level=$("level").value;
- if(!name||!stage||!level){$("profileMessage").textContent="يرجى إدخال الاسم المستعار واختيار السلك والمستوى.";return}
- const profile={name,stage,level};localStorage.setItem("book_for_you_demo_profile",JSON.stringify(profile));
- $("profileMessage").textContent=`مرحبًا ${name}! تم حفظ اختيارك على هذا الجهاز فقط. المستوى: ${level}.`;
- $("filterStage").value=stage;fillLevels($("filterStage"),$("filterLevel"),"كل المستويات");$("filterLevel").value=level;
-// فضاء تصفح المواد: بطاقة لكل مادة، ثم قائمة دروس قابلة للفتح.
-const subjectIcons={"اللغة العربية":"📘","اللغة الفرنسية":"🇫🇷","الرياضيات":"➗","النشاط العلمي":"🔬","الاجتماعيات":"🌍","التربية الإسلامية":"🌙","الفيزياء والكيمياء":"⚗️","علوم الحياة والأرض":"🧬"};
-const lessonLibrary={
- "الرياضيات": [{title:"الأعداد العشرية",intro:"العدد العشري هو عدد يتكوّن من جزء صحيح وجزء عشري يفصل بينهما فاصلة. مثال: 12,35 يتكوّن من 12 جزءًا صحيحًا و35 جزءًا من مئة.",points:["الرقم الأول بعد الفاصلة يمثّل الأعشار.","الرقم الثاني بعد الفاصلة يمثّل أجزاء المئة.","لمقارنة عددين عشريين، نقارن الجزء الصحيح أولًا، ثم الأرقام بعد الفاصلة بالترتيب."],example:"12,35 = 12 + 3/10 + 5/100. والعدد 7,8 أكبر من 7,65 لأن 7,80 أكبر من 7,65.",exercise:"رتّب الأعداد التالية تصاعديًا: 4,7 — 4,07 — 4,70 — 3,99.",answer:"3,99 < 4,07 < 4,7 = 4,70."}],
- "اللغة العربية": [{title:"أنواع الجملة",intro:"تنقسم الجملة في اللغة العربية إلى جملة اسمية وجملة فعلية.",points:["الجملة الاسمية تبدأ باسم، وتتكوّن غالبًا من مبتدأ وخبر.","الجملة الفعلية تبدأ بفعل، وتتكوّن غالبًا من فعل وفاعل وقد يأتي معها مفعول به."],example:"العلمُ نورٌ: جملة اسمية. يقرأُ التلميذُ الدرسَ: جملة فعلية.",exercise:"حدّد نوع الجملة: «الحديقة جميلة» و«يلعب الطفل».",answer:"الأولى جملة اسمية، والثانية جملة فعلية."}],
- "الفيزياء والكيمياء": [{title:"المادة وحالاتها",intro:"توجد المادة في حالات شائعة هي الحالة الصلبة والسائلة والغازية.",points:["للمادة الصلبة شكل وحجم محددان غالبًا.","للسائل حجم محدد ويأخذ شكل الإناء.","للغاز قابلية الانتشار ويملأ الحيز المتاح."],example:"الجليد ماء في الحالة الصلبة، والماء السائل في الحالة السائلة، وبخار الماء في الحالة الغازية.",exercise:"اذكر حالة الماء في كل من: مكعب الثلج، كأس ماء، بخار متصاعد.",answer:"صلبة، سائلة، غازية."}],
- "علوم الحياة والأرض": [{title:"حاجات النباتات",intro:"تحتاج النباتات الخضراء إلى الماء والضوء والهواء والأملاح المعدنية لتنمو نموًا سليمًا.",points:["يمتص الجذر الماء والأملاح المعدنية من التربة.","تستعمل الأوراق الضوء والهواء في صنع المادة العضوية.","يساعد الساق على نقل المواد ودعم النبات."],example:"النبتة التي لا تسقى مدة طويلة تذبل بسبب نقص الماء.",exercise:"اذكر ثلاث حاجات أساسية للنبات الأخضر.",answer:"الماء والضوء والهواء، كما يحتاج إلى الأملاح المعدنية."}],
- "اللغة الفرنسية": [{title:"Se présenter",intro:"Pour se présenter, on peut dire son nom, son âge et sa classe.",points:["Je m'appelle … : للتعريف بالاسم.","J'ai … ans : للتعبير عن العمر.","Je suis en … année : للتعبير عن المستوى الدراسي."],example:"Bonjour ! Je m'appelle Lina. J'ai onze ans et je suis en sixième année.",exercise:"Complète : Je m'appelle … . J'ai … ans.",answer:"Réponse personnelle : complète avec ton prénom et ton âge."}]
-};
-function showCatalogSubjects(){
- const stage=$("catalogStage").value,level=$("catalogLevel").value,wrap=$("subjectCards");wrap.innerHTML='';$("catalogLessons").classList.add('hidden');$("openedLesson").classList.add('hidden');
- if(!stage||!level){wrap.innerHTML='<p class="note">اختر السلك والمستوى لعرض المواد.</p>';return}
- (subjects[stage]||[]).forEach(subject=>{
-  const card=document.createElement('article');card.className='card subject-card';
-  const icon=document.createElement('div');icon.className='emoji';icon.textContent=subjectIcons[subject]||'📚';
-  const h=document.createElement('h3');h.textContent=subject;
-  const desc=document.createElement('p');desc.textContent='افتح المادة للاطلاع على الدروس المتاحة.';
-  const btn=document.createElement('button');btn.type='button';btn.textContent='عرض الدروس ←';btn.addEventListener('click',()=>openSubjectLessons(subject,stage,level));
-  card.append(icon,h,desc,btn);wrap.append(card);
- });
-}
-function openSubjectLessons(subject,stage,level){
- const area=$("catalogLessons"),list=$("lessonList");$("openedLesson").classList.add('hidden');area.classList.remove('hidden');$("catalogSubjectTitle").textContent='📖 دروس '+subject+' — '+level;list.innerHTML='';
- const lessons=lessonLibrary[subject]||[];
- if(!lessons.length){const msg=document.createElement('p');msg.className='status';msg.textContent='لم نضف بعد دروسًا موثقة لهذه المادة والمستوى. ستظهر هنا عناوين الدروس فور إدراج موارد مدارس الريادة والتحقق منها.';list.append(msg);return}
- lessons.forEach((lesson,index)=>{const row=document.createElement('div');row.className='lesson-row';const title=document.createElement('strong');title.textContent='📘 '+lesson.title;const button=document.createElement('button');button.type='button';button.textContent='افتح الدرس';button.addEventListener('click',()=>openLesson(lesson,subject,level));row.append(title,button);list.append(row)});
-}
-function openLesson(lesson,subject,level){
- const box=$("openedLesson");box.classList.remove('hidden');box.innerHTML='';
- const h=document.createElement('h3');h.textContent='📖 '+lesson.title;
- const meta=document.createElement('p');meta.className='note';meta.textContent=subject+' — '+level+' | شرح توضيحي تجريبي';
- const intro=document.createElement('p');intro.textContent=lesson.intro;
- const sub=document.createElement('h4');sub.textContent='أفكار أساسية';
- const ul=document.createElement('ul');lesson.points.forEach(point=>{const li=document.createElement('li');li.textContent=point;ul.append(li)});
- const ex=document.createElement('h4');ex.textContent='مثال مشروح';const exp=document.createElement('p');exp.textContent=lesson.example;
- const q=document.createElement('h4');q.textContent='جرّب بنفسك';const question=document.createElement('p');question.textContent=lesson.exercise;
- const ans=document.createElement('details');const summary=document.createElement('summary');summary.textContent='إظهار التصحيح';const answer=document.createElement('p');answer.textContent=lesson.answer;ans.append(summary,answer);
- const close=document.createElement('button');close.type='button';close.className='secondary';close.textContent='إغلاق الدرس';close.addEventListener('click',()=>box.classList.add('hidden'));
- box.append(h,meta,intro,sub,ul,ex,exp,q,question,ans,close);box.scrollIntoView({behavior:'smooth',block:'start'});
-}
-$("catalogStage").addEventListener('change',()=>{const stage=$("catalogStage").value,sel=$("catalogLevel");sel.innerHTML='<option value="">اختر المستوى</option>';(levels[stage]||[]).forEach(level=>sel.add(new Option(level,level)));sel.disabled=!stage;showCatalogSubjects()});
-$("catalogLevel").addEventListener('change',showCatalogSubjects);
-
-fillSubjects();render();showCatalogSubjects();
-});
-$("clearProfile").addEventListener("click",()=>{localStorage.removeItem("book_for_you_demo_profile");$("studentName").value="";$("stage").value="";$("level").innerHTML='<option value="">اختر السلك أولاً</option>';$("level").disabled=true;$("profileMessage").textContent="تم مسح الاختيار التجريبي من هذا الجهاز."});
-
-// فضاء تصفح المواد: بطاقة لكل مادة، ثم قائمة دروس قابلة للفتح.
-const subjectIcons={"اللغة العربية":"📘","اللغة الفرنسية":"🇫🇷","الرياضيات":"➗","النشاط العلمي":"🔬","الاجتماعيات":"🌍","التربية الإسلامية":"🌙","الفيزياء والكيمياء":"⚗️","علوم الحياة والأرض":"🧬"};
-const lessonLibrary={
- "الرياضيات": [{title:"الأعداد العشرية",intro:"العدد العشري هو عدد يتكوّن من جزء صحيح وجزء عشري يفصل بينهما فاصلة. مثال: 12,35 يتكوّن من 12 جزءًا صحيحًا و35 جزءًا من مئة.",points:["الرقم الأول بعد الفاصلة يمثّل الأعشار.","الرقم الثاني بعد الفاصلة يمثّل أجزاء المئة.","لمقارنة عددين عشريين، نقارن الجزء الصحيح أولًا، ثم الأرقام بعد الفاصلة بالترتيب."],example:"12,35 = 12 + 3/10 + 5/100. والعدد 7,8 أكبر من 7,65 لأن 7,80 أكبر من 7,65.",exercise:"رتّب الأعداد التالية تصاعديًا: 4,7 — 4,07 — 4,70 — 3,99.",answer:"3,99 < 4,07 < 4,7 = 4,70."}],
- "اللغة العربية": [{title:"أنواع الجملة",intro:"تنقسم الجملة في اللغة العربية إلى جملة اسمية وجملة فعلية.",points:["الجملة الاسمية تبدأ باسم، وتتكوّن غالبًا من مبتدأ وخبر.","الجملة الفعلية تبدأ بفعل، وتتكوّن غالبًا من فعل وفاعل وقد يأتي معها مفعول به."],example:"العلمُ نورٌ: جملة اسمية. يقرأُ التلميذُ الدرسَ: جملة فعلية.",exercise:"حدّد نوع الجملة: «الحديقة جميلة» و«يلعب الطفل».",answer:"الأولى جملة اسمية، والثانية جملة فعلية."}],
- "الفيزياء والكيمياء": [{title:"المادة وحالاتها",intro:"توجد المادة في حالات شائعة هي الحالة الصلبة والسائلة والغازية.",points:["للمادة الصلبة شكل وحجم محددان غالبًا.","للسائل حجم محدد ويأخذ شكل الإناء.","للغاز قابلية الانتشار ويملأ الحيز المتاح."],example:"الجليد ماء في الحالة الصلبة، والماء السائل في الحالة السائلة، وبخار الماء في الحالة الغازية.",exercise:"اذكر حالة الماء في كل من: مكعب الثلج، كأس ماء، بخار متصاعد.",answer:"صلبة، سائلة، غازية."}],
- "علوم الحياة والأرض": [{title:"حاجات النباتات",intro:"تحتاج النباتات الخضراء إلى الماء والضوء والهواء والأملاح المعدنية لتنمو نموًا سليمًا.",points:["يمتص الجذر الماء والأملاح المعدنية من التربة.","تستعمل الأوراق الضوء والهواء في صنع المادة العضوية.","يساعد الساق على نقل المواد ودعم النبات."],example:"النبتة التي لا تسقى مدة طويلة تذبل بسبب نقص الماء.",exercise:"اذكر ثلاث حاجات أساسية للنبات الأخضر.",answer:"الماء والضوء والهواء، كما يحتاج إلى الأملاح المعدنية."}],
- "اللغة الفرنسية": [{title:"Se présenter",intro:"Pour se présenter, on peut dire son nom, son âge et sa classe.",points:["Je m'appelle … : للتعريف بالاسم.","J'ai … ans : للتعبير عن العمر.","Je suis en … année : للتعبير عن المستوى الدراسي."],example:"Bonjour ! Je m'appelle Lina. J'ai onze ans et je suis en sixième année.",exercise:"Complète : Je m'appelle … . J'ai … ans.",answer:"Réponse personnelle : complète avec ton prénom et ton âge."}]
-};
-function showCatalogSubjects(){
- const stage=$("catalogStage").value,level=$("catalogLevel").value,wrap=$("subjectCards");wrap.innerHTML='';$("catalogLessons").classList.add('hidden');$("openedLesson").classList.add('hidden');
- if(!stage||!level){wrap.innerHTML='<p class="note">اختر السلك والمستوى لعرض المواد.</p>';return}
- (subjects[stage]||[]).forEach(subject=>{
-  const card=document.createElement('article');card.className='card subject-card';
-  const icon=document.createElement('div');icon.className='emoji';icon.textContent=subjectIcons[subject]||'📚';
-  const h=document.createElement('h3');h.textContent=subject;
-  const desc=document.createElement('p');desc.textContent='افتح المادة للاطلاع على الدروس المتاحة.';
-  const btn=document.createElement('button');btn.type='button';btn.textContent='عرض الدروس ←';btn.addEventListener('click',()=>openSubjectLessons(subject,stage,level));
-  card.append(icon,h,desc,btn);wrap.append(card);
- });
-}
-function openSubjectLessons(subject,stage,level){
- const area=$("catalogLessons"),list=$("lessonList");$("openedLesson").classList.add('hidden');area.classList.remove('hidden');$("catalogSubjectTitle").textContent='📖 دروس '+subject+' — '+level;list.innerHTML='';
- const lessons=lessonLibrary[subject]||[];
- if(!lessons.length){const msg=document.createElement('p');msg.className='status';msg.textContent='لم نضف بعد دروسًا موثقة لهذه المادة والمستوى. ستظهر هنا عناوين الدروس فور إدراج موارد مدارس الريادة والتحقق منها.';list.append(msg);return}
- lessons.forEach((lesson,index)=>{const row=document.createElement('div');row.className='lesson-row';const title=document.createElement('strong');title.textContent='📘 '+lesson.title;const button=document.createElement('button');button.type='button';button.textContent='افتح الدرس';button.addEventListener('click',()=>openLesson(lesson,subject,level));row.append(title,button);list.append(row)});
-}
-function openLesson(lesson,subject,level){
- const box=$("openedLesson");box.classList.remove('hidden');box.innerHTML='';
- const h=document.createElement('h3');h.textContent='📖 '+lesson.title;
- const meta=document.createElement('p');meta.className='note';meta.textContent=subject+' — '+level+' | شرح توضيحي تجريبي';
- const intro=document.createElement('p');intro.textContent=lesson.intro;
- const sub=document.createElement('h4');sub.textContent='أفكار أساسية';
- const ul=document.createElement('ul');lesson.points.forEach(point=>{const li=document.createElement('li');li.textContent=point;ul.append(li)});
- const ex=document.createElement('h4');ex.textContent='مثال مشروح';const exp=document.createElement('p');exp.textContent=lesson.example;
- const q=document.createElement('h4');q.textContent='جرّب بنفسك';const question=document.createElement('p');question.textContent=lesson.exercise;
- const ans=document.createElement('details');const summary=document.createElement('summary');summary.textContent='إظهار التصحيح';const answer=document.createElement('p');answer.textContent=lesson.answer;ans.append(summary,answer);
- const close=document.createElement('button');close.type='button';close.className='secondary';close.textContent='إغلاق الدرس';close.addEventListener('click',()=>box.classList.add('hidden'));
- box.append(h,meta,intro,sub,ul,ex,exp,q,question,ans,close);box.scrollIntoView({behavior:'smooth',block:'start'});
-}
-$("catalogStage").addEventListener('change',()=>{const stage=$("catalogStage").value,sel=$("catalogLevel");sel.innerHTML='<option value="">اختر المستوى</option>';(levels[stage]||[]).forEach(level=>sel.add(new Option(level,level)));sel.disabled=!stage;showCatalogSubjects()});
-$("catalogLevel").addEventListener('change',showCatalogSubjects);
-
-fillSubjects();render();showCatalogSubjects();
-</script>
+<footer>موقع مستقل غير تابع لوزارة التربية الوطنية · مشروع مفتوح المصدر قابل للتطوير<br>إذا لم تجد نتيجة بعد البحث، جرّب كلمة مفتاحية أبسط أو غيّر نوع المورد.</footer>
+<script src="data/resources.js"></script>
+<script src="assets/app.js"></script>
 </body>
 </html>
